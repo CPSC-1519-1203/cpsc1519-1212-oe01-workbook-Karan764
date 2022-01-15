@@ -11,8 +11,8 @@
 		EB2F27DB278D13C0008FAA32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F27DA278D13C0008FAA32 /* SceneDelegate.swift */; };
 		EB2F27DD278D13C0008FAA32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F27DC278D13C0008FAA32 /* ViewController.swift */; };
 		EB2F27E0278D13C0008FAA32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2F27DE278D13C0008FAA32 /* Main.storyboard */; };
-		EB2F27E2278D13C1008FAA32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB2F27E1278D13C1008FAA32 /* Assets.xcassets */; };
 		EB2F27E5278D13C1008FAA32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2F27E3278D13C1008FAA32 /* LaunchScreen.storyboard */; };
+		EBCE440927924C730049FE47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBCE440827924C730049FE47 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +21,9 @@
 		EB2F27DA278D13C0008FAA32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EB2F27DC278D13C0008FAA32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB2F27DF278D13C0008FAA32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EB2F27E1278D13C1008FAA32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB2F27E4278D13C1008FAA32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB2F27E6278D13C1008FAA32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBCE440827924C730049FE47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +60,9 @@
 				EB2F27DA278D13C0008FAA32 /* SceneDelegate.swift */,
 				EB2F27DC278D13C0008FAA32 /* ViewController.swift */,
 				EB2F27DE278D13C0008FAA32 /* Main.storyboard */,
-				EB2F27E1278D13C1008FAA32 /* Assets.xcassets */,
 				EB2F27E3278D13C1008FAA32 /* LaunchScreen.storyboard */,
 				EB2F27E6278D13C1008FAA32 /* Info.plist */,
+				EBCE440827924C730049FE47 /* Assets.xcassets */,
 			);
 			path = HelloiOSWorld;
 			sourceTree = "<group>";
@@ -126,7 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB2F27E5278D13C1008FAA32 /* LaunchScreen.storyboard in Resources */,
-				EB2F27E2278D13C1008FAA32 /* Assets.xcassets in Resources */,
+				EBCE440927924C730049FE47 /* Assets.xcassets in Resources */,
 				EB2F27E0278D13C0008FAA32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
