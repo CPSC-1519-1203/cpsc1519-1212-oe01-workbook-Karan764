@@ -16,30 +16,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aza-IP-dnO">
-                                <rect key="frame" x="20" y="80" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aza-IP-dnO">
+                                <rect key="frame" x="32" y="146" width="374" height="2"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="name"/>
                                 <connections>
                                     <action selector="dismissKeyboard:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="DTx-ag-VI2"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zno-ZR-kM0">
-                                <rect key="frame" x="21" y="123" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zno-ZR-kM0">
+                                <rect key="frame" x="20" y="177" width="373" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="name"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHQ-Mf-vJQ">
-                                <rect key="frame" x="21" y="165" width="373" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHQ-Mf-vJQ">
+                                <rect key="frame" x="162.5" y="432.5" width="89" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Say Hello!"/>
                                 <connections>
                                     <action selector="changeGreeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ud-Nn-00g"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2m-EP-onZ">
-                                <rect key="frame" x="20" y="44" width="374" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2m-EP-onZ">
+                                <rect key="frame" x="0.0" y="51" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,10 +48,16 @@
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="v2m-EP-onZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VYl-aP-nl2"/>
-                            <constraint firstItem="aza-IP-dnO" firstAttribute="firstBaseline" secondItem="v2m-EP-onZ" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="oK1-HL-sAX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v2m-EP-onZ" secondAttribute="trailing" constant="20" id="oVp-bx-oDp"/>
-                            <constraint firstItem="Zno-ZR-kM0" firstAttribute="top" secondItem="v2m-EP-onZ" secondAttribute="bottom" constant="8" symbolic="YES" id="y8z-br-etB"/>
+                            <constraint firstItem="aza-IP-dnO" firstAttribute="top" secondItem="v2m-EP-onZ" secondAttribute="bottom" constant="-2" id="0zm-xR-U49"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aza-IP-dnO" secondAttribute="trailing" constant="20" id="Ee6-UT-bBb"/>
+                            <constraint firstItem="bHQ-Mf-vJQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FLe-XR-zOP"/>
+                            <constraint firstItem="Zno-ZR-kM0" firstAttribute="top" secondItem="aza-IP-dnO" secondAttribute="bottom" constant="8" symbolic="YES" id="cL4-D4-c3S"/>
+                            <constraint firstItem="aza-IP-dnO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="q7r-Po-bvi"/>
+                            <constraint firstItem="Zno-ZR-kM0" firstAttribute="top" secondItem="v2m-EP-onZ" secondAttribute="bottom" constant="8" symbolic="YES" id="sCB-ka-ggv"/>
+                            <constraint firstItem="bHQ-Mf-vJQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vC2-OJ-eN7"/>
+                            <constraint firstItem="v2m-EP-onZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wHj-KR-Ili"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zno-ZR-kM0" secondAttribute="trailing" constant="21" id="yNX-Gd-koW"/>
+                            <constraint firstItem="Zno-ZR-kM0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zhj-EI-rap"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Rf9-3h-sBJ" appends="YES" id="8cz-Vn-8ZE"/>
