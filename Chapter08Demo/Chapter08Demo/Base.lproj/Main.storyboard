@@ -16,22 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFc-Ne-1W1">
-                                <rect key="frame" x="20" y="76" width="374" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFc-Ne-1W1">
+                                <rect key="frame" x="20" y="142" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="celsius temperature" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-Sc-pIt">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="celsius temperature" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-Sc-pIt">
                                 <rect key="frame" x="20" y="203" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="BGh-Oz-nbk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE4-cK-3DT">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GE4-cK-3DT">
                                 <rect key="frame" x="132" y="267" width="151" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Convert">
                                     <backgroundConfiguration key="background">
@@ -42,16 +42,17 @@
                                     <action selector="convertButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="npK-Pm-Ueh"/>
                                 </connections>
                             </button>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minimumValue="-35" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-8m-opA">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minimumValue="-35" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZSX-8m-opA">
                                 <rect key="frame" x="160" y="340" width="94" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="celsiusStepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="eCr-S0-plE"/>
                                 </connections>
                             </stepper>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-35" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="6sT-SX-G7L">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="-35" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="6sT-SX-G7L">
                                 <rect key="frame" x="18" y="-115969" width="378" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="KBK-CN-kQz"/>
+                                </constraints>
                                 <connections>
                                     <action selector="celsiusSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="P5K-E1-LRC"/>
                                 </connections>
@@ -71,8 +72,22 @@
                         <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="hwp-my-xeD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TE7-K9-8sn"/>
+                            <constraint firstItem="ZSX-8m-opA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="340" id="0OF-wA-Kl0"/>
+                            <constraint firstItem="ZSX-8m-opA" firstAttribute="centerX" secondItem="hwp-my-xeD" secondAttribute="centerX" id="18A-D4-CAr"/>
+                            <constraint firstItem="Sad-Sc-pIt" firstAttribute="top" secondItem="mFc-Ne-1W1" secondAttribute="bottom" constant="61" id="3Sa-Pp-7t5"/>
+                            <constraint firstItem="hwp-my-xeD" firstAttribute="top" secondItem="ZSX-8m-opA" secondAttribute="bottom" constant="16" id="ARg-kT-BRa"/>
+                            <constraint firstItem="GE4-cK-3DT" firstAttribute="top" secondItem="Sad-Sc-pIt" secondAttribute="bottom" constant="30" id="FCF-WW-yG6"/>
+                            <constraint firstItem="ZSX-8m-opA" firstAttribute="centerX" secondItem="Sad-Sc-pIt" secondAttribute="centerX" id="GGu-mi-hj5"/>
+                            <constraint firstItem="ZSX-8m-opA" firstAttribute="centerX" secondItem="6sT-SX-G7L" secondAttribute="centerX" id="Ikv-Ws-KnS"/>
+                            <constraint firstItem="ZSX-8m-opA" firstAttribute="centerX" secondItem="GE4-cK-3DT" secondAttribute="centerX" id="RPO-r9-zaf"/>
+                            <constraint firstItem="ZSX-8m-opA" firstAttribute="top" secondItem="GE4-cK-3DT" secondAttribute="bottom" constant="13" id="Tb1-1R-aHF"/>
+                            <constraint firstItem="6sT-SX-G7L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WoE-m9-C4n"/>
+                            <constraint firstItem="6sT-SX-G7L" firstAttribute="leading" secondItem="mFc-Ne-1W1" secondAttribute="leading" id="aEn-X2-hc0"/>
                             <constraint firstItem="hwp-my-xeD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bcX-Yz-5q0"/>
+                            <constraint firstItem="6sT-SX-G7L" firstAttribute="leading" secondItem="Sad-Sc-pIt" secondAttribute="leading" id="k2W-SB-VAV"/>
+                            <constraint firstItem="Sad-Sc-pIt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="203" id="wFH-Ab-83x"/>
+                            <constraint firstItem="6sT-SX-G7L" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-115969" id="xD3-gI-Jt2"/>
+                            <constraint firstItem="ZSX-8m-opA" firstAttribute="centerX" secondItem="mFc-Ne-1W1" secondAttribute="centerX" id="xIT-Qy-sfZ"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="sca-sw-7II" appends="YES" id="vlS-Qb-Gxf"/>
