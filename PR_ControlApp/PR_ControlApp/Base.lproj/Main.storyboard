@@ -53,7 +53,7 @@
                     <connections>
                         <outlet property="buttonObject" destination="Zip-0E-wMj" id="fhg-r1-6yO"/>
                         <outlet property="labelSwitch" destination="8bC-Xf-vdC" id="ef4-80-ZI4"/>
-                        <outlet property="switchObject" destination="Oss-IO-5Tp" id="Eel-o8-mET"/>
+                        <outlet property="switchObj" destination="Oss-IO-5Tp" id="icp-jq-P6P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
