@@ -40,19 +40,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Oss-IO-5Tp" firstAttribute="leading" secondItem="mp0-7Q-Bfp" secondAttribute="leading" id="7P8-u0-8bn"/>
-                            <constraint firstItem="Oss-IO-5Tp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="9qq-qw-9EL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zip-0E-wMj" secondAttribute="trailing" constant="173" id="TrQ-pn-T7W"/>
-                            <constraint firstItem="mp0-7Q-Bfp" firstAttribute="top" secondItem="Zip-0E-wMj" secondAttribute="bottom" constant="53" id="Y2W-3l-G8U"/>
-                            <constraint firstItem="Zip-0E-wMj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="ZD8-7I-OTB"/>
-                            <constraint firstItem="Zip-0E-wMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="h8e-MR-om6"/>
-                            <constraint firstItem="Oss-IO-5Tp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="214" id="mNI-95-g2E"/>
-                            <constraint firstItem="mp0-7Q-Bfp" firstAttribute="top" secondItem="Oss-IO-5Tp" secondAttribute="bottom" constant="29" id="ppH-2Z-OUl"/>
+                            <constraint firstItem="Zip-0E-wMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="IqJ-cs-1wd"/>
+                            <constraint firstItem="Zip-0E-wMj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="QLo-Qe-qQR"/>
+                            <constraint firstItem="Oss-IO-5Tp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="VgB-6W-uV2"/>
+                            <constraint firstItem="Oss-IO-5Tp" firstAttribute="leading" secondItem="mp0-7Q-Bfp" secondAttribute="leading" id="e4f-0C-KeM"/>
+                            <constraint firstItem="mp0-7Q-Bfp" firstAttribute="top" secondItem="Zip-0E-wMj" secondAttribute="bottom" constant="53" id="ged-k2-bMz"/>
+                            <constraint firstItem="Oss-IO-5Tp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="214" id="rTa-yE-guF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zip-0E-wMj" secondAttribute="trailing" constant="173" id="uB4-5l-HSn"/>
+                            <constraint firstItem="mp0-7Q-Bfp" firstAttribute="top" secondItem="Oss-IO-5Tp" secondAttribute="bottom" constant="29" id="y0U-pl-UhN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonObject" destination="Zip-0E-wMj" id="fhg-r1-6yO"/>
-                        <outlet property="labelSwitch" destination="8bC-Xf-vdC" id="ef4-80-ZI4"/>
+                        <outlet property="label" destination="mp0-7Q-Bfp" id="aSo-k2-zxV"/>
                         <outlet property="switchObj" destination="Oss-IO-5Tp" id="icp-jq-P6P"/>
                     </connections>
                 </viewController>

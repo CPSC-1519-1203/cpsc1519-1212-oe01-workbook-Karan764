@@ -12,9 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var buttonObject: UIButton!
     
-    @IBOutlet var labelSwitch: UILabel!
+ 
     
-   // @IBOutlet weak var switchObject: UIView!
+    @IBOutlet weak var label: UILabel!
+    // @IBOutlet weak var switchObject: UIView!
     
     @IBOutlet weak var switchObj: UISwitch!
     override func viewDidLoad() {
@@ -31,10 +32,10 @@ class ViewController: UIViewController {
     
     @IBAction func switchChanged(_ sender: UISwitch) {
         if switchObj.isOn {
-            labelSwitch.text = "On"
+            label.text = "On"
         }
         else{
-            labelSwitch.text = "Off"
+            label.text = "Off"
         }
     }
 }
