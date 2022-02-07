@@ -22,16 +22,21 @@ class LoginViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        let mainVC = segue.destination as? MainViewController
+        
         // Pass the selected object to the new view controller.
+        if let username = usernameTextField.text {
+            mainVC?.username = username
+        }
     }
-    */
-
+    @IBAction func unwindMainVc(segue: UIStoryboardSegue){
+        
+    }
     @IBAction func loginTapped(_ sender: UIButton) {
         if let username = usernameTextField.text, let password = passwordTextField.text{
             let accountManager = UserAccountManage()
