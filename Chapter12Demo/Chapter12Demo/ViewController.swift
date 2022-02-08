@@ -47,6 +47,7 @@ class ViewController: UIViewController {
             ppc.permittedArrowDirections = .up
             
         }
+        present(alert, animated: true, completion: nil)
     }
     
     
