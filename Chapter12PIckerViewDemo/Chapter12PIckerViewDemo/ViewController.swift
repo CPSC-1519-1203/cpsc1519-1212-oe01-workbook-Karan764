@@ -8,6 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return .portrait
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
