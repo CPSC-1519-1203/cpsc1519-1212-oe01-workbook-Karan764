@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tf0-fZ-TMX">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Character Picker-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Character Picker" id="BYZ-38-t0r" customClass="CharacterViewController" customModule="Quiz02ReviewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Wz-aH-W9j">
+                                <rect key="frame" x="20" y="44.000000000000028" width="388" height="455.66666666666674"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hello-PNG" translatesAutoresizingMaskIntoConstraints="NO" id="TaS-O4-MVJ">
+                                        <rect key="frame" x="91.666666666666686" y="0.0" width="205" height="188.66666666666666"/>
+                                    </imageView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qlc-uc-Zdr">
+                                        <rect key="frame" x="34" y="198.66666666666663" width="320" height="216"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiW-PT-lxY">
+                                        <rect key="frame" x="168.33333333333334" y="424.66666666666669" width="51.333333333333343" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Pick"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="8Wz-aH-W9j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1mD-be-XgJ"/>
+                            <constraint firstItem="8Wz-aH-W9j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dt1-GE-U8K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Wz-aH-W9j" secondAttribute="trailing" constant="20" id="he9-z1-6xa"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Character" image="character.bubble" catalog="system" id="OLp-bp-JlQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023.1884057971015" y="110.49107142857143"/>
+        </scene>
+        <!--Slot Machine-->
+        <scene sceneID="4Ac-Nb-7ql">
+            <objects>
+                <viewController title="Slot Machine" id="JfA-kE-2qp" customClass="SlotMachineViewController" customModule="Quiz02ReviewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GP3-ba-53Y">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Sl0-rj-63m"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Slot" image="list.dash" catalog="system" id="FMW-87-cMg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8an-DF-oDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679.7101449275362" y="109.82142857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AG2-eO-8ie">
+            <objects>
+                <viewController id="wRW-gp-blB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hjG-vg-Hma">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Dgw-NB-3q4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zp-14-SY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-125" y="-563"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7eS-Sj-RWD">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Tf0-fZ-TMX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nkb-94-Jeq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gOc-Ar-SSY"/>
+                        <segue destination="JfA-kE-2qp" kind="relationship" relationship="viewControllers" id="8wi-bz-5HU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72f-pm-6yv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="110.49107142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hello-PNG" width="205" height="188.66667175292969"/>
+        <image name="character.bubble" catalog="system" width="128" height="110"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
