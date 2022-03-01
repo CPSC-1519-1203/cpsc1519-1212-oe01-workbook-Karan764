@@ -7,8 +7,35 @@
 
 import UIKit
 
-class SlotMachineViewController: UIViewController {
-
+class SlotMachineViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    //MARK:
+    //MARK: Picker Data Source Methods
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 5
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        images.count
+    }
+    
+    //MARk;
+    //MARK: Picker Delegate Methods
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let currentImage = images[row]
+        let currentImageView = UIImageView(image: currentImage)
+        return currentImageView
+    }
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        64
+    }
+    let images = [
+        UIImage(named: "seven")!,
+        UIImage(named: "bar")!,
+        UIImage(named: "crown")!,
+        UIImage(named: "cherry")!,
+        UIImage(named: "lemon")!,
+        UIImage(named: "apple")!,
+    ]
     override func viewDidLoad() {
         super.viewDidLoad()
 
