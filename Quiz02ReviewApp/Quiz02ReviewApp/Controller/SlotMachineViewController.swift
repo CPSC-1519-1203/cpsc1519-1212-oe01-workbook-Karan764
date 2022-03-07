@@ -8,6 +8,38 @@
 import UIKit
 
 class SlotMachineViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    
+    @IBOutlet weak var picker: UIPickerView!
+    
+    @IBOutlet weak var winLabel: UILabel!
+    
+    @IBOutlet weak var button: UIButton!
+    
+    @IBAction func spin(_ sender: UIButton) {
+        var win = false
+        var numInRow = -1
+        var lastVal = -1
+        
+        for index in 0..<5{
+            let newValue = Int.random(in: 0..<images.count)
+            if newValue == lastVal {
+                numInRow += 1
+            }else{
+                numInRow = 1
+            }
+            lastVal = newValue
+            picker.selectRow(newValue, inComponent: index, animated: true)
+            picker.reloadComponent(index)
+            
+            if(numInRow >= 3){
+                win = true
+            }
+        }
+        winLabel.text = win ? "Winner!" : " "
+    }
+    
+    
     //MARK:
     //MARK: Picker Data Source Methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -28,6 +60,8 @@ class SlotMachineViewController: UIViewController, UIPickerViewDataSource, UIPic
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         64
     }
+    
+    
     let images = [
         UIImage(named: "seven")!,
         UIImage(named: "bar")!,

@@ -23,7 +23,7 @@
                                         <rect key="frame" x="91.666666666666686" y="0.0" width="205" height="188.66666666666666"/>
                                     </imageView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qlc-uc-Zdr">
-                                        <rect key="frame" x="34" y="199" width="320" height="216"/>
+                                        <rect key="frame" x="34" y="198.66666666666663" width="320" height="216"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="iaE-dL-EmI"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="mO1-my-UJm"/>
@@ -65,32 +65,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="11W-NO-EKG">
-                                <rect key="frame" x="0.0" y="134" width="428" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="JfA-kE-2qp" id="Edk-5K-yVy"/>
-                                    <outlet property="delegate" destination="JfA-kE-2qp" id="8E7-W6-FEL"/>
-                                </connections>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtG-QE-dsF">
-                                <rect key="frame" x="188" y="377" width="53" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Spin"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79M-PP-CAt">
-                                <rect key="frame" x="193" y="333" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iib-eW-NIC">
+                                <rect key="frame" x="54" y="125.99999999999997" width="360" height="357.33333333333331"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11W-NO-EKG">
+                                        <rect key="frame" x="20" y="0.0" width="320" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="JfA-kE-2qp" id="Edk-5K-yVy"/>
+                                            <outlet property="delegate" destination="JfA-kE-2qp" id="8E7-W6-FEL"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79M-PP-CAt">
+                                        <rect key="frame" x="124" y="236.00000000000003" width="112" height="57.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtG-QE-dsF">
+                                        <rect key="frame" x="144" y="313.33333333333331" width="72.333333333333314" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Spin">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="spin:" destination="JfA-kE-2qp" eventType="touchUpInside" id="FIY-cS-qkl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="11W-NO-EKG" secondAttribute="trailing" constant="20" id="5zP-9i-cEK"/>
+                                    <constraint firstItem="11W-NO-EKG" firstAttribute="leading" secondItem="iib-eW-NIC" secondAttribute="leading" constant="20" id="Som-f5-ybl"/>
+                                    <constraint firstItem="11W-NO-EKG" firstAttribute="top" secondItem="iib-eW-NIC" secondAttribute="top" constant="20" id="Zg1-L4-nsI"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sl0-rj-63m"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Slot" image="list.dash" catalog="system" id="FMW-87-cMg"/>
+                    <connections>
+                        <outlet property="button" destination="xtG-QE-dsF" id="9iX-uc-4UT"/>
+                        <outlet property="picker" destination="11W-NO-EKG" id="UIh-fO-iHU"/>
+                        <outlet property="winLabel" destination="79M-PP-CAt" id="ard-PD-9il"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8an-DF-oDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,6 +134,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Tf0-fZ-TMX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nkb-94-Jeq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -139,6 +157,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

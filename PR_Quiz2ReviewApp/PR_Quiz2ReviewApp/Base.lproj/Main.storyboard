@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y35-ms-rQW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CharacterPicker-->
+        <scene sceneID="TYp-bf-8a8">
+            <objects>
+                <viewController title="CharacterPicker" id="Wkh-cS-3TH" customClass="CharacterViewController" customModule="PR_Quiz2ReviewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Jb-bS-zOa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="m33-FI-ymL">
+                                <rect key="frame" x="20" y="44" width="374" height="534"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeafParticles_2x" translatesAutoresizingMaskIntoConstraints="NO" id="Pyl-nE-TiX">
+                                        <rect key="frame" x="18" y="0.0" width="338" height="207"/>
+                                    </imageView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Z0-tJ-atj">
+                                        <rect key="frame" x="27" y="247" width="320" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Wkh-cS-3TH" id="my7-B6-ahE"/>
+                                            <outlet property="delegate" destination="Wkh-cS-3TH" id="agw-zC-Y78"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNQ-x4-EmD">
+                                        <rect key="frame" x="159" y="503" width="56" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Click"/>
+                                        <connections>
+                                            <action selector="onButtonTapped:" destination="Wkh-cS-3TH" eventType="touchUpInside" id="UYC-8T-7lN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c3l-3H-Ehw"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="m33-FI-ymL" firstAttribute="top" secondItem="c3l-3H-Ehw" secondAttribute="top" id="BhD-UR-pqO"/>
+                            <constraint firstItem="m33-FI-ymL" firstAttribute="leading" secondItem="c3l-3H-Ehw" secondAttribute="leading" constant="20" id="CjV-WM-Kza"/>
+                            <constraint firstItem="c3l-3H-Ehw" firstAttribute="trailing" secondItem="m33-FI-ymL" secondAttribute="trailing" constant="20" id="axX-En-EbC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Character" image="character.book.closed.he" catalog="system" id="SLY-zx-EOC"/>
+                    <connections>
+                        <outlet property="characterPickerView" destination="1Z0-tJ-atj" id="mR4-Cv-db2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4Z-4a-w6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744.92753623188412" y="-599.33035714285711"/>
+        </scene>
+        <!--SlotMachine-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="SlotMachine" id="BYZ-38-t0r" customClass="SlotMachineViewController" customModule="PR_Quiz2ReviewApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Slot" image="7.circle" catalog="system" id="YZc-qa-Mlo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="-550"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dmN-A9-lxj">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Y35-ms-rQW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xgJ-vz-7VY">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Wkh-cS-3TH" kind="relationship" relationship="viewControllers" id="lph-UD-H7U"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Rjn-uZ-EtG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B9d-Kr-s7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91.304347826086968" y="-557.14285714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="7.circle" catalog="system" width="128" height="121"/>
+        <image name="LeafParticles_2x" width="338" height="207"/>
+        <image name="character.book.closed.he" catalog="system" width="115" height="128"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
