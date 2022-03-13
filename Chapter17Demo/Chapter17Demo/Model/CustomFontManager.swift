@@ -6,9 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 class CustomFontManager{
-    let fontFamilyNames:[String] = UIFont
+    
+    static let fontFamilyNames:[String] = UIFont.familyNames.sorted()
+    
+    
     
     
 }

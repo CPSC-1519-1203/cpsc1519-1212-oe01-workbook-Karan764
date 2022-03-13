@@ -15,6 +15,8 @@
 		EB4FCD5527D97B4500D2765B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4FCD5327D97B4500D2765B /* LaunchScreen.storyboard */; };
 		EB4FCD6027D97C2C00D2765B /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4FCD5F27D97C2C00D2765B /* CustomFont.swift */; };
 		EB4FCD6227D97DEE00D2765B /* CustomFontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4FCD6127D97DEE00D2765B /* CustomFontManager.swift */; };
+		EB627D9327DE707B008E0E4F /* FontTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB627D9227DE707B008E0E4F /* FontTableViewController.swift */; };
+		EB627D9527DE7559008E0E4F /* SelectedFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB627D9427DE7559008E0E4F /* SelectedFontViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		EB4FCD5627D97B4500D2765B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4FCD5F27D97C2C00D2765B /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		EB4FCD6127D97DEE00D2765B /* CustomFontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontManager.swift; sourceTree = "<group>"; };
+		EB627D9227DE707B008E0E4F /* FontTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewController.swift; sourceTree = "<group>"; };
+		EB627D9427DE7559008E0E4F /* SelectedFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFontViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		EB4FCD5E27D97B9900D2765B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB627D9227DE707B008E0E4F /* FontTableViewController.swift */,
+				EB627D9427DE7559008E0E4F /* SelectedFontViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,9 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB627D9327DE707B008E0E4F /* FontTableViewController.swift in Sources */,
 				EB4FCD4D27D97B4400D2765B /* ViewController.swift in Sources */,
 				EB4FCD6027D97C2C00D2765B /* CustomFont.swift in Sources */,
 				EB4FCD4927D97B4400D2765B /* AppDelegate.swift in Sources */,
+				EB627D9527DE7559008E0E4F /* SelectedFontViewController.swift in Sources */,
 				EB4FCD4B27D97B4400D2765B /* SceneDelegate.swift in Sources */,
 				EB4FCD6227D97DEE00D2765B /* CustomFontManager.swift in Sources */,
 			);
