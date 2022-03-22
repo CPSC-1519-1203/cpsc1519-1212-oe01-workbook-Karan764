@@ -15,9 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="qs1-E5-rRi">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="bMb-PQ-q4t">
+                                    <barButtonItem key="rightBarButtonItem" title="+" id="ufx-mZ-gRs">
+                                        <connections>
+                                            <action selector="onCreateNewCharacter:" destination="vZZ-RE-jS8" id="KNi-6L-cot"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterCell" textLabel="8hi-OB-9CG" style="IBUITableViewCellStyleDefault" id="5fc-cx-4Rx">
-                                <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="93.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5fc-cx-4Rx" id="feq-Ms-9Qk">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -39,6 +52,11 @@
                             <outlet property="delegate" destination="vZZ-RE-jS8" id="tI4-Ja-omG"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="+" width="14" id="4hY-aJ-jB4"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Title" id="3dy-5H-Tth"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpM-dX-Jel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -21,6 +21,26 @@ class CharacterTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBAction func onCreateNewCharacter(_ sender: UIBarButtonItem) {
+    // Code coming from chapter 12
+        let alert = UIAlertController(title: "New Character", message: "Enter character name", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: {(textField) in
+            textField.placeholder = "Character Name"
+            
+        })
+        let saveAction = UIAlertAction(title: "Save", style: .default) { action -> Void in
+            let characterNameTextField = alert.textFields![0] as UITextField
+            self.dataManager.characterNames.append(characterNameTextField.text!)
+            self.tableView.reloadData()
+            
+        }
+        alert.addAction(saveAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    
+    
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,17 +72,19 @@ class CharacterTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            //tableView.deleteRows(at: [indexPath], with: .fade)
+            dataManager.characterNames.remove(at: indexPath.row)
+            tableView.reloadData()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+   
 
     /*
     // Override to support rearranging the table view.
